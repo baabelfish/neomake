@@ -5,7 +5,7 @@ endfunction
 function! neomake#makers#ft#nim#nim()
     return {                          
                 \ 'exe': 'nim',                                      
-                \ 'args': ['--verbosity:0', '--colors:off', '-c', 'check'],
+                \ 'args': ['--verbosity:0', '--colors:off', '--compileOnly', '--threads:on', '--experimental', 'check'],
                 \ 'errorformat':                                     
                 \   '%I%f(%l\, %c) Hint: %m,' .                      
                 \   '%W%f(%l\, %c) Warning: %m,' .                   
